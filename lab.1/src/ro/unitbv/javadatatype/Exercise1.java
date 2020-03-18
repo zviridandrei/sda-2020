@@ -20,9 +20,11 @@ public class Exercise1 {
 		System.out.println("Suma este = " +(nr1+nr2));
 		System.out.println("Diferenta este = " +(nr1-nr2));
 		System.out.println("Produsul este = " +(nr1*nr2));
+		
 		double impartire;
 		impartire = (double)nr1/ (double)nr2;
 		System.out.println("Impartire = " +impartire);
+		
 		float media = (nr1+nr2)/2;
 		System.out.println("Media = " +media);
 		
