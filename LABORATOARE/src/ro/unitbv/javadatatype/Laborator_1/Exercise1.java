@@ -1,4 +1,4 @@
-package ro.unitbv.javadatatype;
+package ro.unitbv.javadatatype.Laborator_1;
 
 import java.util.Scanner;
 
