@@ -46,10 +46,7 @@ public class Exercise3 {
 		} else if (roadType == "Drum Express") {
 			System.out.println("Viteza pentru drumul expres este =");
 			return 100;
-		} else
-
-		if (roadType != "Drum Express" & roadType != "Oras" & roadType != "Autostrada"
-				& roadType != "Zona Rezidentiala") {
+		} else {
 			System.out.println("Drumul este necunoscut");
 
 		}
@@ -76,37 +73,30 @@ public class Exercise3 {
 						return 100;
 
 					} else {
-						if (roadType != "Drum Express" & roadType != "Oras" & roadType != "Autostrada"
-								& roadType != "Zona Rezidentiala") {
-							System.out.println("Drumul este necunoscut");
+						System.out.println("Drumul este necunoscut");
 						}
 					}
 				}
 			}
-		}
+		
 		return 0;
 	}
 
 	public static int getMaxSpeedLimitBySwitch(String roadType) {
 		switch (roadType) {
 		case "Autostrada":
-			System.out.println("Viteza maxima pe autostrada este =");
 			return 130;
 		case "Drum Express":
-			System.out.println("Viteza maxima pe drumul expres este =");
 			return 100;
 		case "Oras":
-			System.out.println("viteza maxima in oras este =");
 			return 50;
 		case "Zona Rezidentiala":
-			System.out.println("viteza maxima in zona rezidentiala este =");
 			return 30;
 		default:
-			System.out.println("Drum necunoscut !!===");
-
+			return 0;
 		}
 
-		return 0;
+	
 	}
 
 }

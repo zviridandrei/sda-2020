@@ -1,53 +1,35 @@
 package ro.unitbv.javadatatype.Laborator_2;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Exercise4 {
 
 	public static void main(String[] args) {
-		double[] sir = { 33, 39, 40.5, 37, 37.5, 33.4, 33.2, 39, 35, 40, 40.2 };
-		int elemsir1 = 0;
-		for (int j = 0; j < sir.length; j++) {
-			elemsir1++;
-		}
-		double[] sirs = new double[elemsir1];
-		for (int j = 0; j < sir.length; j++) {
-			sirs[j] = sir[j];
-		}
-
-		System.out.println("Sirul initial" + Arrays.toString(sirs));
-		Arrays.sort(sir);
-		int i = 0;
-		while (i < sir.length && sir[i] < 37) {
-			i++;
-		}
-		double[] TempNormale = new double[i];
-		double[] TempAnormale = new double[sir.length - i];
-		for (int j = 0; j < TempNormale.length; j++) {
-			TempNormale[j] = sir[j];
-		}
-		for (int j = 0; j < TempAnormale.length; j++) {
-			TempAnormale[j] = sir[j + i];
-		}
-		System.out.println("Temperaturile normale sunt:" + Arrays.toString(TempNormale));
-
-		for (int j = 0; j < TempNormale.length; j++) {
-			for (int z = 0; z < sirs.length; z++) {
-
-				if (sirs[z] == TempNormale[j])
-					System.out.println("Indexul pentru= " + TempNormale[j] + "  este=" + z);
+		double[] temperaturi = { 37.2, 35.8, 36.8, 38, 39.2,36.2};
+		List<Double> list1 = new ArrayList<Double>();
+		List<Double> list2 = new ArrayList<Double>();
+		List<Integer> list3 = new ArrayList<Integer>();
+		List<Integer> list4 = new ArrayList<Integer>();
+		
+		for (int j = 0;j < temperaturi.length;)
+			for (double x : temperaturi) {
+				if (x<37.0) {
+					list1.add(x);
+					list3.add(j);
+				} else {
+					list2.add(x);
+					list4.add(j);
+				}
+				j++;
 			}
-		}
-		System.out.println("\n");
-		System.out.println("Temperaturile anormale sunt=" + Arrays.toString(TempAnormale));
-		for (int j = 0; j < TempAnormale.length; j++) {
-			for (int z = 0; z < sirs.length; z++) {
-
-				if (sirs[z] == TempAnormale[j])
-					System.out.println("Indexul pentru= " + TempAnormale[j] + "  este=" + z);
-			}
-		}
-
+		
+		System.out.println("Temperaturi sub 37 grade :");
+		for (int i = 0; i< list1.size();i++)
+			System.out.println("Pacient:" + list3.get(i) + " " + list1.get(i));
+		
+		System.out.println("\nTemperaturi peste 37 grade :");
+		for (int i = 0; i< list2.size();i++)
+			System.out.println("Pacient:" + list4.get(i) + " " + list2.get(i));
 	}
-
 }
