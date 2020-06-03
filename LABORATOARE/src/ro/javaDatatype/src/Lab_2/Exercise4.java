@@ -1,4 +1,4 @@
-package ro.unitbv.javadatatype.Laborator_2;
+package Lab_2;
 
 import java.util.ArrayList;
 import java.util.List;
